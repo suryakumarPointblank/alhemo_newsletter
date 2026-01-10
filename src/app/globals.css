@@ -41,7 +41,7 @@ body {
 .background-wrapper {
   position: relative;
   width: 100%;
-  display: inline-block; /* Shrink-wrap to image dimensions */
+  display: block;
 }
 
 /* Main Background Image - Takes full width, height follows naturally */
@@ -187,3 +187,104 @@ body {
   }
 }
 
+/* Page Container - Generic for all pages */
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   FOOTPRINTS SECURED PAGE STYLES
+   ============================================ */
+
+/* Highlight Signpost Wrapper */
+.highlight-wrapper {
+  position: absolute;
+  width: 20%;
+  z-index: 10;
+  transform-origin: bottom center; /* Pivot from the stake/base */
+  animation: signpostWobble ease-in-out infinite;
+  animation-duration: 4s;
+}
+
+.highlight-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Subtle wobble animation for ground signposts */
+@keyframes signpostWobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.8deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-0.8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Twinkle sparkle effects */
+.twinkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffffff 0%, #fffacd 50%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle ease-in-out infinite;
+  animation-duration: 2s;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.twinkle-1 {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.twinkle-2 {
+  top: 25%;
+  right: 15%;
+  animation-delay: 0.7s;
+}
+
+.twinkle-3 {
+  top: 5%;
+  left: 60%;
+  animation-delay: 1.4s;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
