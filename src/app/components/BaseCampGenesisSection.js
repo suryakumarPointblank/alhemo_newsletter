@@ -9,6 +9,15 @@ export default function BaseCampGenesisSection() {
           alt="Basecamp Genesis Background"
           className="main-background"
         />
+
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/base_camp_genesis/header.png"
+            alt="Basecamp Genesis"
+            className="header-image"
+          />
+        </div>
       </div>
     </section>
   );

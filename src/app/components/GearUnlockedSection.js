@@ -9,6 +9,15 @@ export default function GearUnlockedSection() {
           alt="Gear Unlocked Background"
           className="main-background"
         />
+
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/gear_unlocked/header.png"
+            alt="Gear Unlocked"
+            className="header-image"
+          />
+        </div>
       </div>
     </section>
   );

@@ -9,6 +9,15 @@ export default function IntoTheWildSection() {
           alt="Into the Wild Background"
           className="main-background"
         />
+
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/into_the_wild/header.png"
+            alt="Into the Wild"
+            className="header-image"
+          />
+        </div>
       </div>
     </section>
   );

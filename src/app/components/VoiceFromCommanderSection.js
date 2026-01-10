@@ -9,6 +9,15 @@ export default function VoiceFromCommanderSection() {
           alt="Voice from Commander Background"
           className="main-background"
         />
+
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/voice_from_the_commander/header.png"
+            alt="Voice from Commander"
+            className="header-image"
+          />
+        </div>
       </div>
     </section>
   );

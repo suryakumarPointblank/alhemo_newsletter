@@ -9,6 +9,15 @@ export default function TheNextExpeditionSection() {
           alt="The Next Expedition Background"
           className="main-background"
         />
+
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/the_next_expedition/header.png"
+            alt="The Next Expedition"
+            className="header-image"
+          />
+        </div>
       </div>
     </section>
   );

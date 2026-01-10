@@ -162,6 +162,18 @@ body {
   animation-duration: 5s;
 }
 
+/* Section Header - Same styling as homepage header for all other sections */
+.section-header {
+  position: absolute;
+  top: 0%;
+  left: 23%;
+  width: 57%;
+  z-index: 15;
+  transform-origin: top center;
+  animation: headerSwing ease-in-out infinite;
+  animation-duration: 5s;
+}
+
 .header-image {
   width: 100%;
   height: auto;

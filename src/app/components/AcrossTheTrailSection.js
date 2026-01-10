@@ -12,6 +12,15 @@ export default function AcrossTheTrailSection() {
           className="main-background"
         />
 
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/across_the_trail/header.png"
+            alt="Across the Trail"
+            className="header-image"
+          />
+        </div>
+
         {/* Flag with waving animation */}
         <div
           className="flag-wrapper"

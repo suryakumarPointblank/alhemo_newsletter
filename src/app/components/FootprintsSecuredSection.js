@@ -34,6 +34,15 @@ export default function FootprintsSecuredSection() {
           className="main-background"
         />
 
+        {/* Header with swing animation */}
+        <div className="section-header">
+          <img
+            src="/footprints_secured/header.png"
+            alt="Footprints Secured"
+            className="header-image"
+          />
+        </div>
+
         {/* Highlight Signposts */}
         {highlights.map((highlight) => (
           <div
