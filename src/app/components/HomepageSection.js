@@ -151,6 +151,15 @@ export default function HomepageSection({ useScrollLinks = false }) {
           className="main-background"
         />
 
+        {/* Background Trees Overlay */}
+        <div className="bg-trees-overlay">
+          <img
+            src="/homepage/bg_trees.png"
+            alt="Background Trees"
+            className="bg-trees-image"
+          />
+        </div>
+
         {/* Header */}
         <div className="homepage-header">
           <img

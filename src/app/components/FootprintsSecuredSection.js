@@ -34,6 +34,15 @@ export default function FootprintsSecuredSection() {
           className="main-background"
         />
 
+        {/* Background Trees Overlay */}
+        <div className="bg-trees-overlay">
+          <img
+            src="/homepage/bg_trees.png"
+            alt="Background Trees"
+            className="bg-trees-image"
+          />
+        </div>
+
         {/* Header with swing animation */}
         <div className="section-header">
           <img

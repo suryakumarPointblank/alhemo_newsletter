@@ -51,6 +51,44 @@ body {
   height: auto;
 }
 
+/* Background Trees Overlay - Above bg, below other elements */
+.bg-trees-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5; /* Above background, below branches (10), headers (15), buttons (20) */
+  pointer-events: none;
+  transform-origin: top center;
+  animation: treesSway ease-in-out infinite;
+  animation-duration: 6s;
+}
+
+.bg-trees-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Subtle sway animation for background trees */
+@keyframes treesSway {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(2px) rotate(0.2deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-2px) rotate(-0.2deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
 /* Branch Wrapper - Absolute positioning relative to background-wrapper */
 .branch-wrapper {
   position: absolute;
