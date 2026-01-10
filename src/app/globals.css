@@ -288,3 +288,42 @@ body {
     transform: scale(0.5);
   }
 }
+
+/* ============================================
+   ACROSS THE TRAIL PAGE STYLES
+   ============================================ */
+
+/* Flag Wrapper */
+.flag-wrapper {
+  position: absolute;
+  width: 15%;
+  z-index: 10;
+  transform-origin: left center; /* Pivot from the pole side */
+  animation: flagWave ease-in-out infinite;
+  animation-duration: 2s;
+}
+
+.flag-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flag waving animation - billowing effect */
+@keyframes flagWave {
+  0% {
+    transform: skewY(0deg) rotate(0deg);
+  }
+  25% {
+    transform: skewY(2deg) rotate(0.5deg);
+  }
+  50% {
+    transform: skewY(0deg) rotate(0deg);
+  }
+  75% {
+    transform: skewY(-1.5deg) rotate(-0.3deg);
+  }
+  100% {
+    transform: skewY(0deg) rotate(0deg);
+  }
+}
