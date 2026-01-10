@@ -140,6 +140,15 @@ export default function Home() {
           className="main-background"
         />
 
+        {/* Header - Alhemo logo with subtle swing animation */}
+        <div className="homepage-header">
+          <img
+            src="/homepage/homepage_header.png"
+            alt="Alhemo - Nemo the explorer"
+            className="header-image"
+          />
+        </div>
+
         {/* Animated Branch Overlays */}
         {branches.map((branch) => (
           <div

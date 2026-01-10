@@ -150,3 +150,40 @@ body {
   }
 }
 
+/* Homepage Header - Overlay positioned like branches */
+.homepage-header {
+  position: absolute;
+  top: 0%;
+  left: 23%; /* Centered: 50% - (width/2) = 50% - 25% = 25% */
+  width: 57%; /* Adjust size as needed */
+  z-index: 15; /* Above branches (10) but below buttons (20) */
+  transform-origin: top center;
+  animation: headerSwing ease-in-out infinite;
+  animation-duration: 5s;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Very subtle header swing animation */
+@keyframes headerSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
