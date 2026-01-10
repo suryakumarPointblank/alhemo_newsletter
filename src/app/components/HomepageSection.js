@@ -76,7 +76,7 @@ const buttons = [
     top: "21%",
     delay: "0s",
     link: "/basecamp-genesis",
-    scrollTo: null,
+    scrollTo: "basecamp-genesis",
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ const buttons = [
     top: "28%",
     delay: "0.5s",
     link: "/into-the-wild",
-    scrollTo: null,
+    scrollTo: "into-the-wild",
   },
   {
     id: 3,
@@ -103,7 +103,7 @@ const buttons = [
     top: "26%",
     delay: "0.3s",
     link: "/the-next-expedition",
-    scrollTo: null,
+    scrollTo: "the-next-expedition",
   },
   {
     id: 5,
@@ -112,7 +112,7 @@ const buttons = [
     top: "22%",
     delay: "0.7s",
     link: "/gear-unlocked",
-    scrollTo: null,
+    scrollTo: "gear-unlocked",
   },
   {
     id: 6,
@@ -183,7 +183,7 @@ export default function HomepageSection({ useScrollLinks = false }) {
 
         {/* Navigation Buttons */}
         {buttons.map((button) =>
-          useScrollLinks && button.scrollTo ? (
+          useScrollLinks ? (
             <div
               key={button.id}
               className="nav-button"
@@ -204,11 +204,7 @@ export default function HomepageSection({ useScrollLinks = false }) {
           ) : (
             <a
               key={button.id}
-              href={
-                useScrollLinks && button.scrollTo
-                  ? `#${button.scrollTo}`
-                  : button.link
-              }
+              href={button.link}
               className="nav-button"
               style={{
                 left: button.left,
