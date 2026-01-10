@@ -195,6 +195,18 @@ body {
   overflow-x: hidden;
 }
 
+/* Full Flow Container - Scrollable combined page */
+.full-flow-container {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.full-flow-container .section {
+  width: 100%;
+  position: relative;
+}
+
 /* ============================================
    FOOTPRINTS SECURED PAGE STYLES
    ============================================ */
