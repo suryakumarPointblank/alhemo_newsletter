@@ -67,7 +67,7 @@ const branches = [
   },
 ];
 
-// Buttons - positioned independently with consistent size
+// Buttons with both page links and anchor scroll targets
 const buttons = [
   {
     id: 1,
@@ -76,6 +76,7 @@ const buttons = [
     top: "21%",
     delay: "0s",
     link: "/basecamp-genesis",
+    scrollTo: null,
   },
   {
     id: 2,
@@ -84,6 +85,7 @@ const buttons = [
     top: "28%",
     delay: "0.5s",
     link: "/into-the-wild",
+    scrollTo: null,
   },
   {
     id: 3,
@@ -92,6 +94,7 @@ const buttons = [
     top: "22%",
     delay: "1s",
     link: "/footprints-secured",
+    scrollTo: "footprints-secured",
   },
   {
     id: 4,
@@ -100,6 +103,7 @@ const buttons = [
     top: "26%",
     delay: "0.3s",
     link: "/the-next-expedition",
+    scrollTo: null,
   },
   {
     id: 5,
@@ -108,6 +112,7 @@ const buttons = [
     top: "22%",
     delay: "0.7s",
     link: "/gear-unlocked",
+    scrollTo: null,
   },
   {
     id: 6,
@@ -116,6 +121,7 @@ const buttons = [
     top: "27%",
     delay: "0.2s",
     link: "/across-the-trail",
+    scrollTo: "across-the-trail",
   },
   {
     id: 7,
@@ -124,10 +130,18 @@ const buttons = [
     top: "22%",
     delay: "0.8s",
     link: "/voice-from-commander",
+    scrollTo: "voice-from-commander",
   },
 ];
 
-export default function HomepageSection({ showLinks = true }) {
+export default function HomepageSection({ useScrollLinks = false }) {
+  const handleScroll = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="section" id="homepage">
       <div className="background-wrapper">
@@ -169,10 +183,32 @@ export default function HomepageSection({ showLinks = true }) {
 
         {/* Navigation Buttons */}
         {buttons.map((button) =>
-          showLinks ? (
+          useScrollLinks && button.scrollTo ? (
+            <div
+              key={button.id}
+              className="nav-button"
+              onClick={() => handleScroll(button.scrollTo)}
+              style={{
+                left: button.left,
+                top: button.top,
+                animationDelay: button.delay,
+                cursor: "pointer",
+              }}
+            >
+              <img
+                src={button.src}
+                alt={`Button ${button.id}`}
+                className="button-image"
+              />
+            </div>
+          ) : (
             <a
               key={button.id}
-              href={button.link}
+              href={
+                useScrollLinks && button.scrollTo
+                  ? `#${button.scrollTo}`
+                  : button.link
+              }
               className="nav-button"
               style={{
                 left: button.left,
@@ -186,22 +222,6 @@ export default function HomepageSection({ showLinks = true }) {
                 className="button-image"
               />
             </a>
-          ) : (
-            <div
-              key={button.id}
-              className="nav-button"
-              style={{
-                left: button.left,
-                top: button.top,
-                animationDelay: button.delay,
-              }}
-            >
-              <img
-                src={button.src}
-                alt={`Button ${button.id}`}
-                className="button-image"
-              />
-            </div>
           )
         )}
       </div>

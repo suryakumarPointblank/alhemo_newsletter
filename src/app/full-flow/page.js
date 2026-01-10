@@ -9,7 +9,7 @@ import VoiceFromCommanderSection from "../components/VoiceFromCommanderSection";
 export default function FullFlow() {
   return (
     <div className="full-flow-container">
-      <HomepageSection />
+      <HomepageSection useScrollLinks={true} />
       <FootprintsSecuredSection />
       <AcrossTheTrailSection />
       <VoiceFromCommanderSection />
