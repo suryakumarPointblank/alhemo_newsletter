@@ -107,3 +107,46 @@ body {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+/* Navigation Button - Independent absolute positioning with consistent size */
+.nav-button {
+  position: absolute;
+  width: 12%; /* Consistent size for all buttons */
+  z-index: 20;
+  cursor: pointer;
+  animation: buttonBob ease-in-out infinite;
+  animation-duration: 3s;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Button Image */
+.button-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Button hover effect */
+.nav-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.nav-button:hover .button-image {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Subtle button bobbing animation - less movement than branch sway */
+@keyframes buttonBob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
