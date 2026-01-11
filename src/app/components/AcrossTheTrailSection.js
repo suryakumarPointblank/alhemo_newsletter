@@ -1,6 +1,57 @@
 "use client";
 
-const flag = { src: "/across_the_trail/flag.png", left: "50%", top: "30%" };
+// Array of flags - adjust left, top, and delay values as needed
+const flags = [
+  {
+    id: 1,
+    src: "/across_the_trail/flag1.png",
+    left: "12.6%",
+    top: "18.5%",
+    delay: "0s",
+  },
+  {
+    id: 2,
+    src: "/across_the_trail/flag2.png",
+    left: "34.6%",
+    top: "18.5%",
+    delay: "0.3s",
+  },
+  {
+    id: 3,
+    src: "/across_the_trail/flag3.png",
+    left: "56.6%",
+    top: "18.5%",
+    delay: "0.6s",
+  },
+  {
+    id: 4,
+    src: "/across_the_trail/flag4.png",
+    left: "78.3%",
+    top: "18.5%",
+    delay: "0.9s",
+  },
+  {
+    id: 5,
+    src: "/across_the_trail/flag5.png",
+    left: "23.6%",
+    top: "32.5%",
+    delay: "1.2s",
+  },
+  {
+    id: 6,
+    src: "/across_the_trail/flag6.png",
+    left: "45.6%",
+    top: "32.5%",
+    delay: "1.5s",
+  },
+  {
+    id: 7,
+    src: "/across_the_trail/flag7.png",
+    left: "67.6%",
+    top: "32.5%",
+    delay: "1.8s",
+  },
+];
 
 export default function AcrossTheTrailSection() {
   return (
@@ -30,13 +81,24 @@ export default function AcrossTheTrailSection() {
           />
         </div>
 
-        {/* Flag with waving animation */}
-        <div
-          className="flag-wrapper"
-          style={{ left: flag.left, top: flag.top }}
-        >
-          <img src={flag.src} alt="Flag" className="flag-image" />
-        </div>
+        {/* Flags with waving animation */}
+        {flags.map((flag) => (
+          <div
+            key={flag.id}
+            className="flag-wrapper"
+            style={{
+              left: flag.left,
+              top: flag.top,
+              animationDelay: flag.delay,
+            }}
+          >
+            <img
+              src={flag.src}
+              alt={`Flag ${flag.id}`}
+              className="flag-image"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -358,7 +358,8 @@ body {
 /* Flag Wrapper */
 .flag-wrapper {
   position: absolute;
-  width: 15%;
+  width: 10%;
+  /* max-width: 80px; */
   z-index: 10;
   transform-origin: left center; /* Pivot from the pole side */
   animation: flagWave ease-in-out infinite;
@@ -367,6 +368,7 @@ body {
 
 .flag-image {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
