@@ -1,5 +1,7 @@
 "use client";
 
+import { House } from "lucide-react";
+
 // Target button size as percentage of viewport width
 const TARGET_BUTTON_SIZE = 12;
 // Reference branch width for calculating consistent positioning
@@ -160,6 +162,11 @@ export default function HomepageSection({ useScrollLinks = false }) {
             className="bg-trees-image"
           />
         </div>
+
+        {/* Home Button - Top Right */}
+        <a href="/" className="home-button" title="Back to Home">
+          <House size={28} strokeWidth={2.5} />
+        </a>
 
         {/* Header */}
         <div className="homepage-header">

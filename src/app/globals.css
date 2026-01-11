@@ -89,6 +89,50 @@ body {
   }
 }
 
+/* Home Button - Fixed at top left corner with wooden texture */
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-image: url('/wood.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-color: #8B4513 !important; /* Fallback brown color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Above everything */
+  cursor: pointer;
+  /* One-sided shadow on bottom-right for depth */
+  box-shadow: 4px 4px 8px rgba(60, 30, 10, 0.6), 
+              1px 1px 3px rgba(0, 0, 0, 0.3),
+              inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+              inset 1px 1px 2px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  border: none; /* No border */
+}
+
+.home-button svg {
+  color: #1a1a1a !important; /* Black icon */
+  stroke: #1a1a1a !important;
+  fill: none;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.3));
+}
+
+.home-button:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 6px 6px 12px rgba(60, 30, 10, 0.5), 
+              2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
+
 /* Branch Wrapper - Absolute positioning relative to background-wrapper */
 .branch-wrapper {
   position: absolute;

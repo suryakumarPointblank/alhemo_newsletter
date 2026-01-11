@@ -1,5 +1,7 @@
 "use client";
 
+import { House } from "lucide-react";
+
 export default function IntoTheWildSection() {
   return (
     <section className="section" id="into-the-wild">
@@ -18,6 +20,11 @@ export default function IntoTheWildSection() {
             className="bg-trees-image"
           />
         </div>
+
+        {/* Home Button - Top Right */}
+        <a href="/" className="home-button" title="Back to Home">
+          <House size={28} strokeWidth={2.5} />
+        </a>
 
         {/* Header with swing animation */}
         <div className="section-header">

@@ -1,5 +1,7 @@
 "use client";
 
+import { House } from "lucide-react";
+
 // Array of flags - adjust left, top, and delay values as needed
 const flags = [
   {
@@ -71,6 +73,11 @@ export default function AcrossTheTrailSection() {
             className="bg-trees-image"
           />
         </div>
+
+        {/* Home Button - Top Right */}
+        <a href="/" className="home-button" title="Back to Home">
+          <House size={28} strokeWidth={2.5} />
+        </a>
 
         {/* Header with swing animation */}
         <div className="section-header">

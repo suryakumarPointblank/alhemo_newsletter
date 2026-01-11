@@ -1,5 +1,7 @@
 "use client";
 
+import { House } from "lucide-react";
+
 const highlights = [
   {
     id: 1,
@@ -42,6 +44,11 @@ export default function FootprintsSecuredSection() {
             className="bg-trees-image"
           />
         </div>
+
+        {/* Home Button - Top Right */}
+        <a href="/" className="home-button" title="Back to Home">
+          <House size={28} strokeWidth={2.5} />
+        </a>
 
         {/* Header with swing animation */}
         <div className="section-header">
