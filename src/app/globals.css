@@ -267,32 +267,56 @@ body {
   width: 20%;
   z-index: 10;
   transform-origin: bottom center; /* Pivot from the stake/base */
-  animation: signpostWobble ease-in-out infinite;
-  animation-duration: 4s;
+  animation: signpostBounce 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.highlight-wrapper:hover {
+  animation-play-state: paused;
+  transform: scale(1.08) translateY(-5px);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4)) brightness(1.1);
 }
 
 .highlight-image {
   width: 100%;
   height: auto;
   display: block;
+  animation: signpostGlow 2s ease-in-out infinite alternate;
 }
 
-/* Subtle wobble animation for ground signposts */
-@keyframes signpostWobble {
+/* Dynamic bounce animation with wobble for signposts */
+@keyframes signpostBounce {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(0);
   }
-  25% {
-    transform: rotate(0.8deg);
+  15% {
+    transform: rotate(1.5deg) translateY(-3px);
   }
-  50% {
-    transform: rotate(0deg);
+  30% {
+    transform: rotate(0deg) translateY(-5px);
+  }
+  45% {
+    transform: rotate(-1.5deg) translateY(-3px);
+  }
+  60% {
+    transform: rotate(0deg) translateY(0);
   }
   75% {
-    transform: rotate(-0.8deg);
+    transform: rotate(0.8deg) translateY(-2px);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+/* Subtle glow/shimmer effect on the signpost image */
+@keyframes signpostGlow {
+  0% {
+    filter: brightness(1) saturate(1);
+  }
+  100% {
+    filter: brightness(1.08) saturate(1.1);
   }
 }
 
