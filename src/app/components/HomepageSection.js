@@ -81,7 +81,7 @@ const buttons = [
   {
     id: 2,
     src: "/homepage/button-2.png",
-    left: "14%",
+    left: "16%",
     top: "28%",
     delay: "0.5s",
     link: "/into-the-wild",
@@ -117,7 +117,7 @@ const buttons = [
   {
     id: 6,
     src: "/homepage/button-6.png",
-    left: "67%",
+    left: "69%",
     top: "27%",
     delay: "0.2s",
     link: "/across-the-trail",
@@ -126,7 +126,7 @@ const buttons = [
   {
     id: 7,
     src: "/homepage/button-7.png",
-    left: "80%",
+    left: "83%",
     top: "22%",
     delay: "0.8s",
     link: "/voice-from-commander",
