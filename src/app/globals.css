@@ -215,9 +215,9 @@ body {
 /* Nemo Board - Left side hanging sign */
 .nemo-board-wrapper {
   position: absolute;
-  left: 0%;
+  left: -1%;
   top: 38%;
-  width: 25%;
+  width: 32%;
   z-index: 12;
   transform-origin: top left; /* Pivot from the branch connection point */
   animation: nemoBoardSwing ease-in-out infinite;
@@ -236,13 +236,13 @@ body {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(1deg);
+    transform: rotate(3deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-0.5deg);
+    transform: rotate(-2deg);
   }
   100% {
     transform: rotate(0deg);
@@ -267,19 +267,19 @@ body {
   display: block;
 }
 
-/* Very subtle header swing animation */
+/* More noticeable header swing animation */
 @keyframes headerSwing {
   0% {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(0.5deg);
+    transform: rotate(2deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-0.5deg);
+    transform: rotate(-2deg);
   }
   100% {
     transform: rotate(0deg);
