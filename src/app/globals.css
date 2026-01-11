@@ -157,6 +157,16 @@ body {
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
+/* Navigation Button Attached to Branch - Positioned relative to branch wrapper */
+.nav-button-attached {
+  position: absolute;
+  /* Width is set inline per button to ensure consistent sizing */
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  /* No animation - inherits the branch's sway animation */
+}
+
 /* Button Image */
 .button-image {
   width: 100%;
@@ -166,12 +176,14 @@ body {
 }
 
 /* Button hover effect */
-.nav-button:hover {
+.nav-button:hover,
+.nav-button-attached:hover {
   transform: scale(1.1);
   filter: brightness(1.1);
 }
 
-.nav-button:hover .button-image {
+.nav-button:hover .button-image,
+.nav-button-attached:hover .button-image {
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3));
 }
 
@@ -198,6 +210,43 @@ body {
   transform-origin: top center;
   animation: headerSwing ease-in-out infinite;
   animation-duration: 5s;
+}
+
+/* Nemo Board - Left side hanging sign */
+.nemo-board-wrapper {
+  position: absolute;
+  left: 0%;
+  top: 38%;
+  width: 25%;
+  z-index: 12;
+  transform-origin: top left; /* Pivot from the branch connection point */
+  animation: nemoBoardSwing ease-in-out infinite;
+  animation-duration: 4s;
+}
+
+.nemo-board-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gentle swinging animation for Nemo board */
+@keyframes nemoBoardSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Section Header - Same styling as homepage header for all other sections */
