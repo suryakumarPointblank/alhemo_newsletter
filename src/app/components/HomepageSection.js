@@ -72,7 +72,7 @@ const buttons = [
   {
     id: 1,
     src: "/homepage/button-1.png",
-    left: "3%",
+    left: "6%",
     top: "21%",
     delay: "0s",
     link: "/basecamp-genesis",
@@ -84,8 +84,8 @@ const buttons = [
     left: "16%",
     top: "28%",
     delay: "0.5s",
-    link: "/into-the-wild",
-    scrollTo: "into-the-wild",
+    link: "/gear-unlocked",
+    scrollTo: "gear-unlocked",
   },
   {
     id: 3,
@@ -93,8 +93,8 @@ const buttons = [
     left: "31%",
     top: "22%",
     delay: "1s",
-    link: "/footprints-secured",
-    scrollTo: "footprints-secured",
+    link: "/into-the-wild",
+    scrollTo: "into-the-wild",
   },
   {
     id: 4,
@@ -102,8 +102,8 @@ const buttons = [
     left: "43%",
     top: "26%",
     delay: "0.3s",
-    link: "/the-next-expedition",
-    scrollTo: "the-next-expedition",
+    link: "/across-the-trail",
+    scrollTo: "across-the-trail",
   },
   {
     id: 5,
@@ -111,8 +111,8 @@ const buttons = [
     left: "56%",
     top: "22%",
     delay: "0.7s",
-    link: "/gear-unlocked",
-    scrollTo: "gear-unlocked",
+    link: "/footprints-secured",
+    scrollTo: "footprints-secured",
   },
   {
     id: 6,
@@ -120,8 +120,8 @@ const buttons = [
     left: "69%",
     top: "27%",
     delay: "0.2s",
-    link: "/across-the-trail",
-    scrollTo: "across-the-trail",
+    link: "/voice-from-commander",
+    scrollTo: "voice-from-commander",
   },
   {
     id: 7,
@@ -129,8 +129,8 @@ const buttons = [
     left: "83%",
     top: "22%",
     delay: "0.8s",
-    link: "/voice-from-commander",
-    scrollTo: "voice-from-commander",
+    link: "/the-next-expedition",
+    scrollTo: "the-next-expedition",
   },
 ];
 
